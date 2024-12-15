@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whether Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="assets/weather-app.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="wrapper">
+        <h1>WEATHER APP</h1>
+        <div class="Weather-Container">
+            
+            <!-- Weather Container Div Btn-->
+            <div class="Weather-Button-Container">
+            <p Current-whetherTab class="tab" >Your Whether</p>
+            <p Search-btn class="tab" >Search Weather</p>
+            </div>
+          
+            
+        <div class="WhetherInfoDiv">
+        <!-- Grant-Loaction-Access -->
+        <div class="sub-container Grant-Location-Div" location-Grant>
+                    <img src="./assets/location.png" alt="" height="80px" width="80px" loading="lazy">
+                    <p>Grant Location Access</p>
+                    <p>Allow Access To Get Weather Information</p>
+                    <button location-acessBtn  class="Weather-Fetch" >GRANT ACCESS</button>
+        </div>
+         <!-- Search-Container form  -->
+        <form class="Search-Container" data-searchForm>
+            <input type="text" placeholder="Search for city here..." dataInput>
+            <button type="submit"><img src="./assets/transparency.png" alt="" height="20px" width="20px" loading="lazy"></button>
+        </form>
+        <!-- loading screen Container -->
+        <div class="sub-container loading-Container" loaderContainer>
+            <img src="./assets/loading.gif" alt="" height="150px" width="150px">
+            <p>loading</p>
+        </div>
+
+        <!-- Error Div -->
+         <div class="sub-container Error-Container" error-404 >
+          <img src="./assets/not-found.png" alt="" height="150px" width="150px">
+          <p>ERROR</p>
+         </div>
+
+        
+        <div class="sub-container User-infoContainer" WhetherInfoDisplay>
+            <!-- city name and flag -->
+             <div class="WhetherCity">
+             <p  City-Name id="City-name" ></p>
+             <img src="" alt="" data-country> 
+             </div>
+               <!-- Whether-Description -->
+                <p data-weatherDesc></p>
+                <!-- Whether-Icon -->
+               <img  src="" data-weatherIcon>
+                 <!-- temperarture -->
+               <h1 data-temp></h1>
+              <div class="Weather-Accessories">
+                <!-- Whether-Card-1 -->
+                  <div class="Whether-Accessories-Container">
+                   <img src="assets/windy.png" alt="" height="60px" width="65px">
+                   <p>windspeed</p>
+                   <p data-windSpeed></p>
+                   </div>
+                <!-- Whether-Card-2 -->
+                  <div class="Whether-Accessories-Container">
+                   <img src="./assets/humidity.png" alt="" height="60px" width="65px">
+                   <p>HUMITIDY</p>
+                   <p data-Humidity></p>
+                  </div>
+                  <!-- Whether-Card-3 -->
+                  <div class="Whether-Accessories-Container">
+                   <img src="assets/cloud.png" alt="" height="60px" width="65px">
+                   <p>CLOUDS</p>
+                   <p data-clouds></p>
+                  </div>
+                </div>
+            </div>
+                </div>
+              
+              
+           
+                </div>
+            </div>
+            
+            <script src="script.js"></script>
+</body>
+</html>
